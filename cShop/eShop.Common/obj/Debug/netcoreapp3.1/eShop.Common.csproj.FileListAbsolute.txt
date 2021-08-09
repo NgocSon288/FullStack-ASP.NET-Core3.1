@@ -1,0 +1,9 @@
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\bin\Debug\netcoreapp3.1\eShop.Common.deps.json
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\bin\Debug\netcoreapp3.1\eShop.Common.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\bin\Debug\netcoreapp3.1\eShop.Common.pdb
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.csproj.AssemblyReference.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.AssemblyInfoInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.AssemblyInfo.cs
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.csproj.CoreCompileInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\eShop.Common\obj\Debug\netcoreapp3.1\eShop.Common.pdb

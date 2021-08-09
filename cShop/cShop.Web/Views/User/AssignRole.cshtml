@@ -1,0 +1,58 @@
+﻿@model RoleAssignRequest
+@section Title{
+    Quản lý thành viên
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form asp-action="AssignRole" asp-controller="User" class="w-100">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Phân quyền thành viên</h5>
+                        @if (!string.IsNullOrEmpty(ViewBag.message))
+                        {
+                            <div class="alert alert-@(ViewBag.isSuccess?"success":"danger") alert-dismissible fade show alert-timeout" id="msgAlert" role="alert">
+                                <strong>@(ViewBag.isSuccess?"S":"Uns")uccessfully!</strong> @ViewBag.message
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+
+                        <input type="hidden" asp-for="Id" />
+
+                        @if (Model != null && Model.RoleAssignRequests != null)
+                        {
+                            var roles = Model.RoleAssignRequests;
+                            var length = roles.Count;
+                            for (int i = 0; i < length; i++)
+                            {
+                                <div class="form-group">
+                                    <label>
+                                        @roles[i].Name
+                                        <input type="checkbox" asp-for="RoleAssignRequests[i].IsSelected" />
+                                        <input type="hidden" asp-for="RoleAssignRequests[i].Id" />
+                                        <input type="hidden" asp-for="RoleAssignRequests[i].Name" />
+                                    </label>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Script{
+    <script>
+        setTimeout(function () {
+            $('#msgAlert').fadeOut('slow');
+        }, 2000);
+    </script>
+}

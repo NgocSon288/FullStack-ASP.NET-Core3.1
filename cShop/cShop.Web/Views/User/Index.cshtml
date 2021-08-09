@@ -1,0 +1,80 @@
+﻿@model List<UserViewModel>
+
+@section Title{
+    Quản lý thành viên
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Danh sách thành viên</h5>
+
+                    @{
+                        var modifiedButtons = new List<ListPagination.ModifiedButton>
+                                                {
+                            new ListPagination.ModifiedButton()
+                            {
+                                Classes = "btn btn-info",
+                                Text = "Cập nhật",
+                                ControllerName = "User",
+                                ActionName="Edit",
+                                RouteDatas = new Dictionary<string, ListPagination.UrlButton>()
+                                                        {
+                                    {"userId",  new ListPagination.UrlButton(){ PropertyName = nameof(UserViewModel.Id)} }
+                                }
+                            },
+                            new ListPagination.ModifiedButton()
+                            {
+                                Url="/user/delete",
+                                Classes = "btn btn-danger btn-delete-row",
+                                Text = "Xóa",
+                                RouteDatas=new Dictionary<string, ListPagination.UrlButton>()
+                                                        {
+                                    {"id",  new ListPagination.UrlButton(){PropertyName = nameof(UserViewModel.Id)} }
+                                }
+                            },
+                            new ListPagination.ModifiedButton()
+                            {
+                                Classes = "btn btn-info",
+                                Text = "Roles",
+                                ControllerName = "User",
+                                ActionName = "AssignRole",
+                                RouteDatas=new Dictionary<string, ListPagination.UrlButton>()
+                                                        {
+                                    {"userId",  new ListPagination.UrlButton(){PropertyName = nameof(UserViewModel.Id)} }
+                                }
+                            }
+                        };
+                        var displayNameValues = new Dictionary<string, string>()
+                                                {
+                            {"Tên", nameof(UserViewModel.LastName)},
+                            {"Tài khoản" , nameof(UserViewModel.UserName)},
+                            {"Địa chỉ" , nameof(UserViewModel.Address)},
+                            {"Email" , nameof(UserViewModel.Email)},
+                            {"Ngày sinh", nameof(UserViewModel.BirthDay) },
+                            {"Tuổi", nameof(UserViewModel.Age) }
+                        };
+
+                        var modelPagination = new ListPagination.PaginationModel
+                        {
+                            Data = Model.Select(m => (object)m).ToList(),
+                            Type = typeof(UserViewModel),
+                            DisplayNameValuess = displayNameValues,
+                            ModifiedButtons = modifiedButtons
+                        };
+                    }
+                    @await Component.InvokeAsync("ListPagination", modelPagination)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script
+{
+    <script>
+        paginationObj.init();
+    </script>
+}

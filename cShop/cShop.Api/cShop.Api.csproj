@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cShop.Application\cShop.Application.csproj" />
+    <ProjectReference Include="..\cShop.Data\cShop.Data.csproj" />
+    <ProjectReference Include="..\cShop.Utilities\cShop.Utilities.csproj" />
+    <ProjectReference Include="..\cShop.ViewModel\cShop.ViewModel.csproj" />
+  </ItemGroup>
+
+
+</Project>

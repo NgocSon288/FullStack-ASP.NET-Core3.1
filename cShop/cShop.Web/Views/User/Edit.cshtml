@@ -1,0 +1,90 @@
+﻿@model UserUpdateRequest
+@section Title{
+    Quản lý thành viên
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <form asp-action="Edit" asp-controller="User" class="w-100">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cập nhật thành viên</h5>
+                        @if (!string.IsNullOrEmpty(ViewBag.message))
+                        {
+                            <div class="alert alert-@(ViewBag.isSuccess?"success":"danger") alert-dismissible fade show alert-timeout"id="msgAlert" role="alert">
+                                <strong>@(ViewBag.isSuccess?"S":"Uns")uccessfully!</strong> @ViewBag.message
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+
+
+
+
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="FirstName"></label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" asp-for="FirstName">
+                                <span asp-validation-for="FirstName" class="text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="LastName"></label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" asp-for="LastName">
+                                <span asp-validation-for="LastName" class="text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="Address"></label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" asp-for="Address">
+                                <span asp-validation-for="Address" class="text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="PhoneNumber"></label>
+                            <div class="col-md-9">
+                                <input class="form-control" asp-for="PhoneNumber">
+                                <span asp-validation-for="PhoneNumber" class="text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="Age"></label>
+                            <div class="col-md-9">
+                                <input type="number" class="form-control" asp-for="Age">
+                                <span asp-validation-for="Age" class="text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3" asp-for="BirthDay"></label>
+                            <div class="col-md-9">
+                                <input type="date" class="form-control" asp-for="BirthDay">
+                                <span asp-validation-for="BirthDay" class="text text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Script{
+    <script>
+        setTimeout(function () {
+            $('#msgAlert').fadeOut('slow');
+        }, 2000);
+    </script>
+}

@@ -1,0 +1,9 @@
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\bin\Debug\netcoreapp3.1\cShop.ViewModel.deps.json
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\bin\Debug\netcoreapp3.1\cShop.ViewModel.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\bin\Debug\netcoreapp3.1\cShop.ViewModel.pdb
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.csproj.AssemblyReference.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.AssemblyInfoInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.AssemblyInfo.cs
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.csproj.CoreCompileInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.ViewModel\obj\Debug\netcoreapp3.1\cShop.ViewModel.pdb

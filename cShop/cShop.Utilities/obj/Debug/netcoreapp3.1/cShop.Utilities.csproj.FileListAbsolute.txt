@@ -1,0 +1,12 @@
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\bin\Debug\netcoreapp3.1\cShop.Utilities.deps.json
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\bin\Debug\netcoreapp3.1\cShop.Utilities.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\bin\Debug\netcoreapp3.1\cShop.Utilities.pdb
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\bin\Debug\netcoreapp3.1\cShop.ViewModel.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\bin\Debug\netcoreapp3.1\cShop.ViewModel.pdb
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.csproj.AssemblyReference.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.AssemblyInfoInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.AssemblyInfo.cs
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.csproj.CoreCompileInputs.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.csproj.CopyComplete
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Utilities\obj\Debug\netcoreapp3.1\cShop.Utilities.pdb

@@ -1,0 +1,77 @@
+﻿@model List<RoleViewModel>
+
+@section Title{
+    Quản lý quyền
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Danh sách các quyền</h5>
+
+                    @{
+                        var modifiedButtons = new List<ListPagination.ModifiedButton>
+                                                                                    {
+                            new ListPagination.ModifiedButton()
+                            {
+                                Classes = "btn btn-info",
+                                Text = "Cập nhật",
+                                ControllerName = "Role",
+                                ActionName="Edit",
+                                RouteDatas = new Dictionary<string, ListPagination.UrlButton>()
+                                                                                            {
+                                    {"roleId",  new ListPagination.UrlButton(){ PropertyName = nameof(RoleViewModel.Id)} }
+                                }
+                            },
+                            new ListPagination.ModifiedButton()
+                            {
+                                Url="/role/delete",
+                                Classes = "btn btn-danger btn-delete-row",
+                                Text = "Xóa",
+                                RouteDatas=new Dictionary<string, ListPagination.UrlButton>()
+                                                                                            {
+                                    {"id",  new ListPagination.UrlButton(){PropertyName = nameof(RoleViewModel.Id)} }
+                                }
+                            }
+                        };
+                        var displayNameValues = new Dictionary<string, string>()
+                                                {
+                            {"Tên quyền" , nameof(RoleViewModel.Name)},
+                            {"Mô tả" , nameof(RoleViewModel.Description)},
+                        };
+
+                        var globalButtons = new List<ListPagination.GlobalButton>()
+                        {
+                            new ListPagination.GlobalButton()
+                            {
+                                Classes = "btn btn-primary",
+                                Text = "Thêm quyền",
+                                ControllerName = "Role",
+                                ActionName="Create"
+                            }
+                        };
+
+                        var modelPagination = new ListPagination.PaginationModel
+                        {
+                            Data = Model.Select(m => (object)m).ToList(),
+                            Type = typeof(RoleViewModel),
+                            DisplayNameValuess = displayNameValues,
+                            ModifiedButtons = modifiedButtons,
+                            GlobalButtons= globalButtons
+                        };
+                    }
+                    @await Component.InvokeAsync("ListPagination", modelPagination)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script
+{
+    <script>
+        paginationObj.init();
+    </script>
+}
