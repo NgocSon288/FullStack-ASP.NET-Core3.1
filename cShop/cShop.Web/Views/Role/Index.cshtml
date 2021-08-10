@@ -36,10 +36,10 @@
                                 }
                             }
                         };
-                        var displayNameValues = new Dictionary<string, string>()
-                                                {
-                            {"Tên quyền" , nameof(RoleViewModel.Name)},
-                            {"Mô tả" , nameof(RoleViewModel.Description)},
+                        var displayNameValues = new Dictionary<string, ListPagination.DisplayValue>()
+                        {
+                            {"Tên quyền" , new ListPagination.DisplayValue(nameof(RoleViewModel.Name))},
+                            {"Mô tả" , new ListPagination.DisplayValue(nameof(RoleViewModel.Description))}
                         };
 
                         var globalButtons = new List<ListPagination.GlobalButton>()

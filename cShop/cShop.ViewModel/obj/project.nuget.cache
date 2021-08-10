@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/eRjTgcQCdCO72IpmXxoaM+t4bWdqd7603KG65XEhlhF07kTjuqGPrc6BhhuIA5yCFjuvyV09A4eechn3DJkrg==",
+  "dgSpecHash": "PzbZGGityyAH/G/7eK/MViV0V0S4JH2gXdD6eJi/ZIKgaqJ/QxBDfNUtE8OAxJGcC6Uow8O0IKVmvdvV8TTjcQ==",
   "success": true,
   "projectFilePath": "D:\\Code\\Project\\FullStack-ASP.NET-Core3.1\\cShop\\cShop.ViewModel\\cShop.ViewModel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Huynh Ngoc Son\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.8\\microsoft.aspnetcore.http.features.5.0.8.nupkg.sha512",
+    "C:\\Users\\Huynh Ngoc Son\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Huynh Ngoc Son\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\Huynh Ngoc Son\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

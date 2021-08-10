@@ -86,3 +86,6 @@ D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\obj\Debug\netcoreapp3.
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\obj\Debug\netcoreapp3.1\cShop.Api.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\obj\Debug\netcoreapp3.1\cShop.Api.pdb
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\obj\Debug\netcoreapp3.1\cShop.Api.genruntimeconfig.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Api\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

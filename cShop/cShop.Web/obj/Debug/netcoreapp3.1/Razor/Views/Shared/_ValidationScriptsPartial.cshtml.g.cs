@@ -70,34 +70,55 @@ using cShop.Utilities.Options;
 #nullable disable
 #nullable restore
 #line 9 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+using cShop.ViewModel.Catalog.Categories;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Microsoft.Extensions.Options;
+using cShop.Utilities.Constants;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 12 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Options;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Configuration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
 using System.Reflection;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b5e5ef4ebf7354cc35c7dacddd6bc3068f19a47", @"/Views/Shared/_ValidationScriptsPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f96881368e94dd1b8695addb0e12246f0b559d2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09afc6fb804c515a2215bda5946047f6b74397d0", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__ValidationScriptsPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/lib/jquery-validation/dist/jquery.validate.min.js"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -126,7 +147,7 @@ using System.Reflection;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b5e5ef4ebf7354cc35c7dacddd6bc3068f19a475940", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b5e5ef4ebf7354cc35c7dacddd6bc3068f19a476555", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -140,7 +161,7 @@ using System.Reflection;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b5e5ef4ebf7354cc35c7dacddd6bc3068f19a476979", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b5e5ef4ebf7354cc35c7dacddd6bc3068f19a477594", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

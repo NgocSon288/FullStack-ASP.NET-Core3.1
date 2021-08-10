@@ -1,7 +1,10 @@
 ﻿@model ListPagination.PaginationModel
 @inject IOptions<PaginationSetting> paginationSettingOption
+@inject IOptions<PathStatic> pathStaticOption
+@inject IConfiguration configuration
 
 @{
+    var _pathStatic = pathStaticOption.Value;
     var data = Model.Data;
     var type = Model.Type;
     var displayNameValuess = Model.DisplayNameValuess;
@@ -11,7 +14,7 @@
     var columnsCount = Model.DisplayNameValuess.Count + 2;
     foreach (var (_, namePro) in displayNameValuess)
     {
-        namePropertyInfo.Add(namePro, propertiesInfo.FirstOrDefault(p => p.Name == namePro));
+        namePropertyInfo.Add(namePro.Value, propertiesInfo.FirstOrDefault(p => p.Name == namePro.Value));
     }
 
     var modifiedButtons = Model.ModifiedButtons;
@@ -21,15 +24,14 @@
     var pageSize = paginationSetting.PageSize;
     var itemsCount = data.Count;
     var pageCount = (itemsCount + pageSize - 1) / pageSize;
+    var baseUrl = configuration.GetValue<string>(SystemConstants.AppSettings.BaseAddressServer) + "/"+ _pathStatic.UploadStaticPath;
 }
-
 <div class="table-responsive">
     <div class="d-none" id="pagination-settings" data-pagecount="@pageCount" data-pagesize="@pageSize" data-itemscount="@itemsCount" data-activepage="1"></div>
 
     <table id="zero_config" class="table table-striped table-bordered">
         <div class="w-100">
             <div class="float-left">
-
 
                 @if (globalButtons != null && globalButtons.Count > 0)
                 {
@@ -49,7 +51,6 @@
                         }
                     }
                 }
-
             </div>
             <div class="form-inline my-2 my-lg-0 mb-3 float-right" style="margin-bottom: 10px !important">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" id="txt-search" aria-label="Search">
@@ -76,9 +77,26 @@
             {
                 <tr class="row-paginate-item">
                     <td class="row-paginate-item-stt text-center"></td>
-                    @foreach (var (_, nameProperty) in displayNameValuess)
+                    @foreach (var (_, property) in displayNameValuess)
                     {
-                        <td>@(namePropertyInfo[nameProperty].GetValue(item))</td>
+                        <td valign="middle" >
+                            @{
+                                switch (property.CategoryDisplay)
+                                {
+                                    case ListPagination.CategoryDisplay.Text:
+                                        <text>@namePropertyInfo[property.Value].GetValue(item)</text>
+                                        break;
+                                    case ListPagination.CategoryDisplay.Image:
+                                        var path = baseUrl + "/" + namePropertyInfo[property.Value].GetValue(item);
+                                        <img src="@path" class="img-fluid img-thumbnail"
+                                             width="@paginationSetting.ImageWith"
+                                             height="@paginationSetting.ImageHeight"/>
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                        </td>
                     }
                     @if (modifiedButtons != null || modifiedButtons.Count > 0)
                     {
@@ -114,7 +132,6 @@
                 </td>
             </tr>
         </tbody>
-
     </table>
 
     @if (pageCount > 0)
@@ -141,5 +158,4 @@
             </ul>
         </nav>
     }
-
 </div>

@@ -14,11 +14,36 @@ namespace cShop.AdminApp.Components
 
             public Type Type { get; set; }
 
-            public Dictionary<string, string> DisplayNameValuess { get; set; }
+            public Dictionary<string, DisplayValue> DisplayNameValuess { get; set; }
 
             public List<ModifiedButton> ModifiedButtons { get; set; }
 
             public List<GlobalButton> GlobalButtons { get; set; }
+        }
+
+        public class DisplayValue
+        {
+            public string Value { get; set; }
+
+            public CategoryDisplay CategoryDisplay { get; set; }
+
+            public DisplayValue(string value)
+            {
+                this.Value = value;
+                CategoryDisplay = CategoryDisplay.Text;
+            }
+
+            public DisplayValue(string value, CategoryDisplay categoryDisplay)
+            {
+                this.Value = value;
+                CategoryDisplay = categoryDisplay;
+            }
+        }
+
+        public enum CategoryDisplay
+        {
+            Text,
+            Image
         }
 
         public class GlobalButton

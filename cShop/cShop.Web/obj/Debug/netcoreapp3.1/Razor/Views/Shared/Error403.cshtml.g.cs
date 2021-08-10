@@ -70,34 +70,55 @@ using cShop.Utilities.Options;
 #nullable disable
 #nullable restore
 #line 9 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+using cShop.ViewModel.Catalog.Categories;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Microsoft.Extensions.Options;
+using cShop.Utilities.Constants;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
-using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 12 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Options;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Microsoft.Extensions.Configuration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\Views\_ViewImports.cshtml"
 using System.Reflection;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"21e3887fce3765316f307723a540c61c0c90a01f", @"/Views/Shared/Error403.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f96881368e94dd1b8695addb0e12246f0b559d2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09afc6fb804c515a2215bda5946047f6b74397d0", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error403 : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -138,7 +159,7 @@ using System.Reflection;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html dir=\"ltr\">\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f6584", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f7199", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <meta name=\"description\"");
                 BeginWriteAttribute("content", " content=\"", 263, "\"", 273, 0);
                 EndWriteAttribute();
@@ -158,7 +179,7 @@ using System.Reflection;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f8354", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f8969", async() => {
                 WriteLiteral(@"
     <div class=""main-wrapper"">
         <div class=""preloader"">
@@ -173,7 +194,7 @@ using System.Reflection;
                 <h3 class=""text-uppercase error-subtitle"">BẠN KHÔNG CÓ QUYỀN TRUY CẬP TRANG NÀY!</h3>
                 <p class=""text-muted m-t-30 m-b-30"">YOU SEEM TO BE TRYING TO FIND HIS WAY HOME</p>
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f9224", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e3887fce3765316f307723a540c61c0c90a01f9839", async() => {
                     WriteLiteral("Về trang chủ");
                 }
                 );

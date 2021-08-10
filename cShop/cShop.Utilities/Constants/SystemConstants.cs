@@ -14,6 +14,9 @@ namespace cShop.Utilities.Constants
             public static readonly string Token = "Token";
             public static readonly string Id = "Id";
             public static readonly string PaginationSetting = "PaginationSetting";
+            public static readonly string PathStatic = "PathStatic";
+            public static readonly string TokensIssuer = "Tokens:Issuer";
+            public static readonly string TokensKey = "Tokens:Key";
         }
 
         public static class DatabaseConstants

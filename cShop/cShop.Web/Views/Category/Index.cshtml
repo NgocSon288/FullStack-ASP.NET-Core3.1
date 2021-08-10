@@ -1,0 +1,68 @@
+﻿@model List<CategoryViewModel>
+
+@section Title{
+    Quản lý loại sản phẩm
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Danh sách loại sản phẩm</h5>
+
+                    @{
+                        var modifiedButtons = new List<ListPagination.ModifiedButton>
+                                                                                                                                    {
+                            new ListPagination.ModifiedButton()
+                            {
+                                Classes = "btn btn-info",
+                                Text = "Cập nhật",
+                                ControllerName = "Category",
+                                ActionName="Edit",
+                                RouteDatas = new Dictionary<string, ListPagination.UrlButton>()
+                                {
+                                    {"categoryId",  new ListPagination.UrlButton(){ PropertyName = nameof(CategoryViewModel.Id)} }
+                                }
+                            },
+                            new ListPagination.ModifiedButton()
+                            {
+                                Url="/category/delete",
+                                Classes = "btn btn-danger btn-delete-row",
+                                Text = "Xóa",
+                                RouteDatas=new Dictionary<string, ListPagination.UrlButton>()
+                                {
+                                    {"id",  new ListPagination.UrlButton(){PropertyName = nameof(CategoryViewModel.Id)} }
+                                }
+                            }
+                        };
+                        var displayNameValues = new Dictionary<string, ListPagination.DisplayValue>()
+                        {
+                            {"Tên", new ListPagination.DisplayValue(nameof(CategoryViewModel.Name))},
+                            {"Mô tả" , new ListPagination.DisplayValue(nameof(CategoryViewModel.Description))},
+                            {"Ngày tạo" , new ListPagination.DisplayValue(nameof(CategoryViewModel.DateCreated))},
+                            {"Alt" , new ListPagination.DisplayValue(nameof(CategoryViewModel.Alt))},
+                            {"Hình ảnh", new ListPagination.DisplayValue(nameof(CategoryViewModel.ImagePath), ListPagination.CategoryDisplay.Image)}
+                        };
+
+                        var modelPagination = new ListPagination.PaginationModel
+                        {
+                            Data = Model.Select(m => (object)m).ToList(),
+                            Type = typeof(CategoryViewModel),
+                            DisplayNameValuess = displayNameValues,
+                            ModifiedButtons = modifiedButtons
+                        };
+                    }
+                    @await Component.InvokeAsync("ListPagination", modelPagination)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script
+{
+    <script>
+        paginationObj.init();
+    </script>
+}

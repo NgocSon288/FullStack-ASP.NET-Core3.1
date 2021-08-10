@@ -44,7 +44,6 @@ D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
@@ -165,7 +164,6 @@ D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
@@ -205,7 +203,6 @@ D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
@@ -476,3 +473,8 @@ D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\obj\Debug\netcoreapp3.
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\obj\Debug\netcoreapp3.1\cShop.AdminApp.dll
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\obj\Debug\netcoreapp3.1\cShop.AdminApp.pdb
 D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\obj\Debug\netcoreapp3.1\cShop.AdminApp.genruntimeconfig.cache
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\cShop.AdminApp.StaticWebAssets.xml
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Code\Project\FullStack-ASP.NET-Core3.1\cShop\cShop.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs

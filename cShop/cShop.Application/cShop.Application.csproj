@@ -5,9 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Services\Catalog\" />
     <Folder Include="Services\Utilities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include = "Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>

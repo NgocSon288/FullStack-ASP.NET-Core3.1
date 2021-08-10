@@ -1,6 +1,7 @@
 using cShop.AdminApp.Authenticates.Handlers;
 using cShop.AdminApp.Middlewares;
 using cShop.AdminAppMail.Utilities;
+using cShop.ApiIntegration.Catalog.Categories;
 using cShop.ApiIntegration.System.Roles;
 using cShop.ApiIntegration.System.Users;
 using cShop.Utilities.Constants;
@@ -59,13 +60,17 @@ namespace cShop.Web
             // Delare Services
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            services.AddTransient<ICategoryApiClient, CategoryApiClient>();
+
             services.AddTransient<IUserApiClient, UserApiClient>();
             services.AddTransient<IRoleApiClient, RoleApiClient>();
+
             services.AddTransient<IWebSendMailHelper, WebSendMailHelper>();
             services.AddTransient<IJwtHelper, JwtHelper>();
 
             // Options
             services.Configure<PaginationSetting>(Configuration.GetSection(SystemConstants.AppSettings.PaginationSetting));
+            services.Configure<PathStatic>(Configuration.GetSection(SystemConstants.AppSettings.PathStatic));
 
             // runtime compilation
             services.AddRazorPages()

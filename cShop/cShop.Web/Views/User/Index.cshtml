@@ -47,14 +47,14 @@
                                 }
                             }
                         };
-                        var displayNameValues = new Dictionary<string, string>()
+                        var displayNameValues = new Dictionary<string, ListPagination.DisplayValue>()
                                                 {
-                            {"Tên", nameof(UserViewModel.LastName)},
-                            {"Tài khoản" , nameof(UserViewModel.UserName)},
-                            {"Địa chỉ" , nameof(UserViewModel.Address)},
-                            {"Email" , nameof(UserViewModel.Email)},
-                            {"Ngày sinh", nameof(UserViewModel.BirthDay) },
-                            {"Tuổi", nameof(UserViewModel.Age) }
+                            {"Tên", new ListPagination.DisplayValue(nameof(UserViewModel.LastName))},
+                            {"Tài khoản" , new ListPagination.DisplayValue(nameof(UserViewModel.UserName))},
+                            {"Địa chỉ" , new ListPagination.DisplayValue(nameof(UserViewModel.Address))},
+                            {"Email" , new ListPagination.DisplayValue(nameof(UserViewModel.Email))},
+                            {"Ngày sinh", new ListPagination.DisplayValue(nameof(UserViewModel.BirthDay))},
+                            {"Tuổi", new ListPagination.DisplayValue(nameof(UserViewModel.Age))}
                         };
 
                         var modelPagination = new ListPagination.PaginationModel

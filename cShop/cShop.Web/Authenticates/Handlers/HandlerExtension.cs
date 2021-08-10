@@ -29,9 +29,6 @@ namespace cShop.AdminApp.Authenticates.Handlers
 
                         var listRolesElements = userRoles.Split(';').ToList();
 
-                        // test
-                        var value = pro.GetValue(null);
-                        var check = listRolesElements.Contains(pro.GetValue(null));
 
                         return listRolesElements.Contains(pro.GetValue(null));
                     });

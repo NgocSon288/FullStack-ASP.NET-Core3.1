@@ -1,4 +1,6 @@
-﻿using cShop.Application.Services.System.Roles;
+﻿using cShop.Application.Common;
+using cShop.Application.Services.Catalog.Categories;
+using cShop.Application.Services.System.Roles;
 using cShop.Application.Services.System.Users;
 using cShop.Data.EF;
 using cShop.Data.Entities;
@@ -83,8 +85,8 @@ namespace cShop.Api
                 });
             });
 
-            string issuer = Configuration.GetValue<string>("Tokens:Issuer");
-            string signingKey = Configuration.GetValue<string>("Tokens:Key");
+            string issuer = Configuration.GetValue<string>(SystemConstants.AppSettings.TokensIssuer);
+            string signingKey = Configuration.GetValue<string>(SystemConstants.AppSettings.TokensKey);
             byte[] signingKeyBytes = System.Text.Encoding.UTF8.GetBytes(signingKey);
 
             services.AddAuthentication(opt =>
@@ -141,9 +143,18 @@ namespace cShop.Api
             services.AddTransient<SignInManager<AppUser>>();
             services.AddTransient<RoleManager<AppRole>>();
 
+            services.AddTransient<ICategoryService, CategoryService>();
+
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+
+            services.AddTransient<ICategoryService, CategoryService>();
+
             services.AddTransient<IJwtHelper, JwtHelper>();
+            services.AddTransient<IFileStorageService, FileStorageService>();
+
+            // Options services
+            services.Configure<PathStatic>(Configuration.GetSection(SystemConstants.AppSettings.PathStatic));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -153,6 +164,7 @@ namespace cShop.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             // Swagger
             app.UseSwagger();

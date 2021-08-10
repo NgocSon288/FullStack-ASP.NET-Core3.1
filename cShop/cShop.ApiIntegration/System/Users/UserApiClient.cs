@@ -14,6 +14,8 @@ namespace cShop.ApiIntegration.System.Users
 {
     public class UserApiClient : BaseApiClient, IUserApiClient
     {
+        private const string BaseUrl = "api/users";
+
         public UserApiClient(IHttpClientFactory httpClientFactory,
                    IHttpContextAccessor httpContextAccessor,
                     IConfiguration configuration) : base(httpClientFactory, httpContextAccessor, configuration)
@@ -22,7 +24,7 @@ namespace cShop.ApiIntegration.System.Users
 
         public async Task<ApiResult<string>> Authenticate(UserLoginRequest request)
         {
-            var url = "api/users/authenticate";
+            var url = $"{BaseUrl}/authenticate";
             var response = await SendRequestBase(url, HttpMethodType.POST, request, HttpContentType.StringContent, null);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -32,7 +34,7 @@ namespace cShop.ApiIntegration.System.Users
 
         public async Task<ApiResult<UserRegisterResponse>> Register(UserRegisterRequest request)
         {
-            var url = "api/users/register";
+            var url = $"{BaseUrl}/register";
             var response = await SendRequestBase(url, HttpMethodType.POST, request, HttpContentType.StringContent, null);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -42,7 +44,7 @@ namespace cShop.ApiIntegration.System.Users
 
         public async Task<ApiResult<UserRegisterResponse>> ConfirmCreatedNewAccount(UserComfirmNewAccountRequest request)
         {
-            var url = $"api/users/confirm?UserId={request.UserId}&Code={request.Code}";
+            var url = $"{BaseUrl}/confirm?UserId={request.UserId}&Code={request.Code}";
             var response = await SendRequestBase(url, HttpMethodType.GET, request, HttpContentType.StringContent, null);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -56,7 +58,7 @@ namespace cShop.ApiIntegration.System.Users
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/users/";
+            var url = $"{BaseUrl}";
             var response = await SendRequestBase(url, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -70,7 +72,7 @@ namespace cShop.ApiIntegration.System.Users
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/users/{userId}";
+            var url = $"{BaseUrl}/{userId}";
             var response = await SendRequestBase(url, HttpMethodType.PUT, request, HttpContentType.StringContent, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -84,7 +86,7 @@ namespace cShop.ApiIntegration.System.Users
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/users/{userId}";
+            var url = $"{BaseUrl}/{userId}";
             var response = await SendRequestBase(url, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -98,7 +100,7 @@ namespace cShop.ApiIntegration.System.Users
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/users/{userId}";
+            var url = $"{BaseUrl}/{userId}";
             var response = await SendRequestBase(url, HttpMethodType.DELETE, 0, HttpContentType.StringContent, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -112,7 +114,7 @@ namespace cShop.ApiIntegration.System.Users
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/users/{userId}/roles";
+            var url = $"{BaseUrl}/{userId}/roles";
             var response = await SendRequestBase(url, HttpMethodType.PUT, request, HttpContentType.StringContent, headers);
 
             var body = await response.Content.ReadAsStringAsync();

@@ -16,7 +16,7 @@ namespace cShop.ApiIntegration.System.Roles
 {
     public class RoleApiClient : BaseApiClient, IRoleApiClient
     {
-
+        private const string BaseUrl = "api/roles";
         public RoleApiClient(IHttpClientFactory httpClientFactory,
                    IHttpContextAccessor httpContextAccessor,
                     IConfiguration configuration) : base(httpClientFactory, httpContextAccessor, configuration)
@@ -25,7 +25,7 @@ namespace cShop.ApiIntegration.System.Roles
 
         public async Task<ApiResult<RoleCreateResponse>> Create(RoleCreateRequest request)
         {
-            var url = "api/roles";
+            var url = $"{BaseUrl}";
             var response = await SendRequestBase(url, HttpMethodType.POST, request, HttpContentType.StringContent, null);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -39,7 +39,7 @@ namespace cShop.ApiIntegration.System.Roles
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/roles/";
+            var url = $"{BaseUrl}";
             var response = await SendRequestBase(url, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -53,7 +53,7 @@ namespace cShop.ApiIntegration.System.Roles
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/roles/{roleId}";
+            var url = $"{BaseUrl}/{roleId}";
             var response = await SendRequestBase(url, HttpMethodType.PUT, request, HttpContentType.StringContent, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -67,7 +67,7 @@ namespace cShop.ApiIntegration.System.Roles
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/roles/{roleId}";
+            var url = $"{BaseUrl}/{roleId}";
             var response = await SendRequestBase(url, headers);
 
             var body = await response.Content.ReadAsStringAsync();
@@ -81,7 +81,7 @@ namespace cShop.ApiIntegration.System.Roles
             {
                 {SystemConstants.AppSettings.Token, "Bearer"}
             };
-            var url = $"/api/roles/{roleId}";
+            var url = $"{BaseUrl}/{roleId}";
             var response = await SendRequestBase(url, HttpMethodType.DELETE, 0, HttpContentType.StringContent, headers);
 
             var body = await response.Content.ReadAsStringAsync();

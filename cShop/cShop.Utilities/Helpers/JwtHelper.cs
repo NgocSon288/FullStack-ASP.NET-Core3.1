@@ -53,9 +53,9 @@ namespace cShop.Utilities.Helpers
 
             validationParameters.ValidateLifetime = true;
 
-            validationParameters.ValidAudience = _configuration["Tokens:Issuer"];
-            validationParameters.ValidIssuer = _configuration["Tokens:Issuer"];
-            validationParameters.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
+            validationParameters.ValidAudience = _configuration[SystemConstants.AppSettings.TokensIssuer];
+            validationParameters.ValidIssuer = _configuration[SystemConstants.AppSettings.TokensIssuer];
+            validationParameters.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration[SystemConstants.AppSettings.TokensKey]));
 
             ClaimsPrincipal principal = new JwtSecurityTokenHandler().ValidateToken(jwtToken, validationParameters, out validatedToken);
 
